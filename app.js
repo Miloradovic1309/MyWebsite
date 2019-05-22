@@ -1,6 +1,8 @@
 var express = require('express');
 var app = express();
 
+const port = process.env.PORT || 3000;
+
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res){
@@ -9,6 +11,6 @@ app.get("/", function(req, res){
 
 
 
-app.listen(3000, () => {
-    console.log('Server is up on port ' + 3000)
+app.listen(port, () => {
+    console.log('Server is up on port ' + port)
 });
